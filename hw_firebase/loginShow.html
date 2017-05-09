@@ -1,0 +1,107 @@
+<!DocType html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Chat Room</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Roboto Font -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  		<!-- Firebase JS -->
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+		<!-- Material Design Lite -->
+  		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+  		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+
+		<!-- Custom JS/CSS -->
+  		<script src="js/script.js"></script>
+  		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="mdl-grid">
+
+			<!-- PROFILE Update MARKUP -->
+			<div class="mdl-card mdl-shadow--2dp hover-shadow">
+			    <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+			    	<h2 class="mdl-card__title-text">User Info Update</h2>
+				</div>
+				<div class="mdl-card__supporting-text">
+				    <!-- User Info Form -->
+				    <form action="#">
+				        <div class="mdl-textfield mdl-js-textfield">
+				        	<input class="mdl-textfield__input" type="text" id="userName">
+				        	<label class="mdl-textfield__label" for="sample1">User Name</label>
+				        </div>
+						<div class="mdl-textfield mdl-js-textfield">
+				        	<input class="mdl-textfield__input" type="text" id="userAge">
+				        	<label class="mdl-textfield__label" for="sample1">Age</label>
+				        </div>
+						<div class="mdl-textfield mdl-js-textfield">
+				        	<input class="mdl-textfield__input" type="text" id="userOccupation">
+				        	<label class="mdl-textfield__label" for="sample1">Occupation</label>
+				        </div>
+						<div class="mdl-textfield mdl-js-textfield">
+				        	<input class="mdl-textfield__input" type="text" id="userDescription">
+				        	<label class="mdl-textfield__label" for="sample1">Description</label>
+				        </div>
+				    </form>
+				    <div class="mdl-textfield mdl-js-textfield">
+				    	<h6>Your photo: </h6>
+				        <input type="file" id="file" name="file"/>
+				    </div>
+
+				    <!-- SignIn/SignUp/Logout Button -->
+				    	<button class="mdl-button mdl-js-button mdl-button--raised" id="btnSubmit">Submit</button>
+				</div>
+		  	</div>
+
+			<!-- Profile MARKUP -->
+			<div class="mdl-card mdl-shadow--2dp hover-shadow">
+			    <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+			    	<h2 class="mdl-card__title-text">Profile</h2>
+			    </div>
+			    <div class="mdl-grid">
+			    	<div class="mdl-card__supporting-text" id="user-pic">
+			        	<img src="" class="demo-avatar">
+			      	</div>
+			      	<div class="mdl-card__supporting-text" id="user-info">
+				        <ul id='example-messages' class="example-chat-messages">
+				       		<li><strong>Name</strong>: <span id="profile-name">N/A</span></li>
+				        	<li><strong>Email</strong>: <span id="profile-email">N/A</span></li>
+				        	<li><strong>Occupation</strong>: <span id="profile-occupation">N/A</span></li>
+				       		<li><strong>Age</strong>: <span id="profile-age">N/A</span></li>
+				       		<li><strong>Description</strong>: <span id="profile-description">N/A</span></li>
+				        </ul>
+				    </div>
+
+		      		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id ="btnSignOut">Sign Out</button>
+			    </div>
+			</div>
+
+			<!-- CHAT MARKUP -->
+			<div class="mdl-card mdl-shadow--2dp">
+			    <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+			    	<h2 class="mdl-card__title-text">Firebase Chat Demo</h2>
+			    </div>
+			    <div class="mdl-card__supporting-text">
+			    	<div class="mdl-textfield mdl-js-textfield">
+							<label class="mdl-textfield__label" id="typeName">anonymous</label>
+			      </div>
+				<ul id='example-messages' class="example-chat-messages"></ul>
+
+			    <footer>
+			        <div class="mdl-layout__content mdl-color--grey-100">
+				        <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="messageInput" name="email" placeholder="Type a message ..."/>
+			        </div>
+			    </footer>
+			</div>
+
+		</div>
+	</body>
+</html>
